@@ -5,7 +5,6 @@ const { generateToken } = require("../utils/token");
 /* ============= signup controller ================ */
 exports.signup = async (req, res, next) => {
   try {
-    console.log(req.body);
     await signupService(req.body);
     res.status(200).json({
       status: "success",

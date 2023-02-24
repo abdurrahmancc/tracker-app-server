@@ -24,12 +24,7 @@ app.use(
       "Authorization",
     ],
     exposedHeaders: ["Set-Cookie", "Date", "ETag"],
-    origin: [
-      "https://support-29169.web.app",
-      "http://localhost:3000",
-      "https://support-orcin.vercel.app",
-      "https://support-29169.firebaseapp.com",
-    ],
+    origin: ["https://iridescent-kashata-cacab0.netlify.app", "http://localhost:3000"],
   })
 );
 

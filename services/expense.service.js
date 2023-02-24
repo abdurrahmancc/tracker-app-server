@@ -15,3 +15,10 @@ exports.getLastWeekExpenseService = async () => {
   d.setDate(d.getDate() - 1);
   return await Expense.find({ createdAt: { $gt: d } });
 };
+
+/* ==========   get Last month Expense Service  ======== */
+exports.getLastMonthExpenseService = async () => {
+  var d = new Date();
+  d.setDate(d.getDate() - 30);
+  return await Expense.find({ createdAt: { $gt: d } });
+};

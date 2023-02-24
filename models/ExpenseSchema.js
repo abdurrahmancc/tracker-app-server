@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const validator = require("validator");
 
 const expenseSchema = mongoose.Schema(
   {
@@ -18,18 +17,13 @@ const expenseSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
-    email: {
-      type: String,
-      required: [true, "email is required"],
-      trim: true,
-      unique: true,
-      validate: [validator.isEmail, "provide a valid email"],
-      lowercase: true,
-    },
     status: {
       type: String,
       enum: ["pending", "success"],
       default: "success",
+    },
+    mobile: {
+      type: String,
     },
   },
   {
