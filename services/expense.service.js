@@ -12,7 +12,7 @@ exports.getExpenseService = async () => {
 /* ==========   get Last Week Expense Service  ======== */
 exports.getLastWeekExpenseService = async () => {
   var d = new Date();
-  d.setDate(d.getDate() - 1);
+  d.setDate(d.getDate() - 7);
   return await Expense.find({ createdAt: { $gt: d } });
 };
 
